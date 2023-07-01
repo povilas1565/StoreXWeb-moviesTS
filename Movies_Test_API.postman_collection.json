@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "306742aa-c203-470c-a8af-ec1fa26313a1",
+		"name": "Movies Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20733485"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/api/category",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test cat",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_domain}}/api/category",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "ME",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test cat",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_domain}}/api/category/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "ME",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test cat",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/api/category/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/api/movies",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List by category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/api/moviesByCategory/2",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"moviesByCategory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3QtYXBpLnN0b3JleHdlYi5jb20vYXBpL2xvZ2luIiwiaWF0IjoxNjU1MzA5MDIzLCJleHAiOjE2NTUzMTI2MjMsIm5iZiI6MTY1NTMwOTAyMywianRpIjoiRWs2ZmVzOFlOTVNjRXF4aSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._2wSUj7RHxXzkeymRw0CZug44HVRv-lQWVOMsCIbwYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/api/movies/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test movie",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "the test movie",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/syria/Desktop/download.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_domain}}/api/movies",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test movie",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "the test movie",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/syria/Desktop/download.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_domain}}/api/movies/2",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjU1Mjk4MDAwLCJleHAiOjE2NTUzMDE2MDAsIm5iZiI6MTY1NTI5ODAwMCwianRpIjoiMk1TRzZQSmo1cjh1eEpyRyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NgwsT8ndba7A8q8svx-57IlEsHrrgRBf5IN_JspKXnQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test movie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "the test movie",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/syria/Desktop/download.jpg",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "_method",
+									"value": "delete",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_domain}}/api/movies/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "aghyad",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aghed11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api_domain}}/api/register",
+					"host": [
+						"{{api_domain}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cookie",
+						"value": "INTSESSID=TKN-5875dec719c202d7bd5b7d932fad4d623498354ac5c3d20d3f1af2b8ba0df762; fsc_menu_data={\"registering.php\":{\"employees\":{\"cat_entity\":\"tocollapse\"}},\"services.php\":{\"print.flow.items\":{\"cat_product\":\"tocollapse\"},\"print.flow\":{\"cat_entity\":\"collapsed\",\"cat_flow_print\":\"tocollapse\"}},\"processing.php\":{\"agencies\":{\"cat_recipient\":\"tocollapse\"}}}; fsc_menu=tocollapse",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "products.xlsx",
+							"type": "file",
+							"src": "/C:/Users/syria/Downloads/products_5_27_2022, 2_02_00 PM (2).xlsx",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "admin@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api_domain}}/api/login",
+					"host": [
+						"{{api_domain}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

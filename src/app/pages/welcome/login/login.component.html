@@ -1,0 +1,31 @@
+<div class="fullPage d-flex align-items-center justify-content-center">
+    <div class="row justify-content-center w-100">
+        <div class="col-lg-5 col-md-7 col-sm-10">
+
+        <p-card>
+            <ng-template pTemplate="header" class="card-header">
+                <img src="assets/images/logo.png" class="w-25">
+            </ng-template>
+
+            <h3>
+                Login
+            </h3>
+            <form [formGroup]="loginCtrl" (ngSubmit)="login()">
+                <input type="text" pInputText class="w-100 mt-2" placeholder="Email" formControlName="email"/>
+                <small *ngIf="!(emailCtrl.errors| keyvalue)?.length" > {{emailCtrl.errors}}</small>
+                <input type="password" pInputText class="w-100 mt-2" placeholder="Password" formControlName="password"/>
+                <small *ngIf="!(passwordCtrl.errors| keyvalue)?.length" > {{passwordCtrl.errors}}</small>
+
+                    <div class="row justify-content-between mt-2">
+                        <div class="col-auto">
+                            Don't have an account? <a routerLink="/signup">Signup</a>
+                        </div>
+                        <div class="col-auto">
+                            <button pButton type="button" label="Login" type="submit" class="me-1"></button>
+                        </div>
+                    </div>
+                </form>
+        </p-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.fullPage {
+    min-height: 100vh;
+}
+.card-header {
+    text-align: center;
+}
+small {
+    color: rgb(153, 0, 0);
+}

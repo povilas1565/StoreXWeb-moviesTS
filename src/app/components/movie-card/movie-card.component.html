@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-4 py-2" *ngFor="let movie of movies" (click)="editMovie(movie)">
+        <p-card [header]="movie.name" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header" *ngIf="movie.image">
+                <img alt="Card" [src]="movie.image">
+            </ng-template>
+            <p>{{movie.description}}</p>
+        </p-card>
+    </div>
+</div>
